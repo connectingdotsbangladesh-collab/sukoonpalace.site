@@ -433,9 +433,9 @@ const TRANSLATIONS = {
     step_num_2: '০২',
     step_num_3: '০৩',
     step_num_4: '০৪',
-    phone_1: '০১৯১৪-৫১৪০১৯',
-    phone_2: '০১৭৫৭-০৩১৪৪০',
-    phone_3: '০১৫১৬-১৬০৬৯৮',
+    phone_1: '০১৭৬৭-৬৩০৯৮০',
+    phone_2: '০১৯১৪-৫১৪০১৯',
+    phone_3: '০১৭৫৭-০৩১৪৪০',
     addr_site_val: 'প্লট-০২, রোড-৩/বি, ব্লক-সি, আঁটি মডেল সোসাইটি, কেরানীগঞ্জ, ঢাকা-১৩১২।',
     addr_office_val: 'চন্দ্রিমার হাল্কার পাড়, বসিলা গার্ডেন সিটি, বসিলা ৪০ ফিট মেইন রোড, বসিলা, মোহাম্মদপুর, ঢাকা।',
     btn_wa_chat: 'হোয়াটসঅ্যাপে চ্যাট করুন',
@@ -447,7 +447,7 @@ const TRANSLATIONS = {
     f_cat_6: 'ব্রোশিওর ডাউনলোড (PDF)',
     f_addr_site: 'প্লট-০২, রোড-৩/বি, ব্লক-সি, আঁটি মডেল সোসাইটি, কেরানীগঞ্জ, ঢাকা-১৩১২।',
     f_addr_office: 'চন্দ্রিমার হাল্কার পাড়, বসিলা গার্ডেন সিটি, বসিলা ৪০ ফিট মেইন রোড, মোহাম্মদপুর, ঢাকা।',
-    f_phones: '০১৯১৪-৫১৪০১৯ / ০১৭৫৭-০৩১৪৪০ / ০১৫১৬-১৬০৬৯৮',
+    f_phones: '+880 1767-630980 (হোয়াটসঅ্যাপ/মেইন) / ০১৯১৪-৫১৪০১৯ / ০১৭৫৭-০৩১৪৪০',
     f_copyright: '© 2026 Sukoon Palace. All Rights Reserved. (সুকুন প্যালেস)',
     tip_wa: 'WhatsApp চ্যাট',
     tip_call: 'সরাসরি কল করুন',
@@ -744,9 +744,9 @@ const TRANSLATIONS = {
     step_num_2: '02',
     step_num_3: '03',
     step_num_4: '04',
-    phone_1: '01914-514019',
-    phone_2: '01757-031440',
-    phone_3: '01516-160698',
+    phone_1: '+880 1767-630980',
+    phone_2: '01914-514019',
+    phone_3: '01757-031440',
     addr_site_val: 'Plot-02, Road-3/B, Block-C, Ati Model Society, Keraniganj, Dhaka-1312.',
     addr_office_val: 'Chandrima Halkar Par, Bosila Garden City, 40 Ft Main Road, Bosila, Mohammadpur, Dhaka.',
     btn_wa_chat: 'Chat on WhatsApp',
@@ -758,7 +758,7 @@ const TRANSLATIONS = {
     f_cat_6: 'Download Brochure (PDF)',
     f_addr_site: 'Plot-02, Road-3/B, Block-C, Ati Model Society, Keraniganj, Dhaka-1312.',
     f_addr_office: 'Chandrima Halkar Par, Bosila Garden City, 40 Ft Main Road, Mohammadpur, Dhaka.',
-    f_phones: '01914-514019 / 01757-031440 / 01516-160698',
+    f_phones: '+880 1767-630980 (WhatsApp/Main) / 01914-514019 / 01757-031440',
     f_copyright: '© 2026 Sukoon Palace. All Rights Reserved.',
     tip_wa: 'WhatsApp Chat',
     tip_call: 'Call Directly',
@@ -829,8 +829,8 @@ function applyTranslations() {
   // Top Phone Numbers
   const topPhone1 = document.getElementById('topPhone1');
   const topPhone2 = document.getElementById('topPhone2');
-  if (topPhone1) topPhone1.textContent = currentLang === 'bn' ? '০১৯১৪-৫১৪০১৯' : '01914-514019';
-  if (topPhone2) topPhone2.textContent = currentLang === 'bn' ? '০১৭৫৭-০৩১৪৪০' : '01757-031440';
+  if (topPhone1) topPhone1.textContent = currentLang === 'bn' ? '০১৭৬৭-৬৩০৯৮০' : '+880 1767-630980';
+  if (topPhone2) topPhone2.textContent = 'WhatsApp';
 
   // Calculator Select Options
   const calcUnitType = document.getElementById('calcUnitType');
