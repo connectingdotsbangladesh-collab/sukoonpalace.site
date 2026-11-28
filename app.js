@@ -163,6 +163,7 @@ const TRANSLATIONS = {
   bn: {
     announcement_badge: 'অগ্রিম বুকিং চলমান',
     announcement_text: 'সম্ভাব্য নির্মাণকাজ শুরু: নভেম্বর ২০২৭ | ৩-৪ কর্মদিবসের মধ্যে সাফ-কবলা দলিল হস্তান্তরের সুযোগ',
+    nav_videos: 'ভিডিও',
     nav_overview: 'প্রজেক্ট পরিচিতি',
     nav_engineering: 'কাঠামো ও ডিজাইন',
     nav_amenities: 'সুযোগ-সুবিধা',
@@ -452,11 +453,28 @@ const TRANSLATIONS = {
     tip_call: 'সরাসরি কল করুন',
     modal_success_title: 'ধন্যবাদ! আপনার আবেদন গৃহীত হয়েছে',
     modal_success_desc: 'আমাদের সিনিয়র রিলেশনশিপ অফিসার অতি দ্রুত আপনার সাথে যোগাযোগ করবেন।',
-    modal_btn_close: 'ঠিক আছে'
+    modal_btn_close: 'ঠিক আছে',
+    video_subbadge: 'অফিসিয়াল ভিডিও গ্যালারি',
+    video_heading: 'সুকুন প্যালেস ভিডিও স্টোরি ও সাইট ট্যুর',
+    video_lead: 'আমাদের অফিসিয়াল YouTube চ্যানেলের এক্সক্লুসিভ প্রমো ও আঁটি মডেল টাউন সোসাইটি পরিচিতি ভিডিও দেখে প্রকল্পের বাস্তব পরিবেশ অনুভব করুন।',
+    video_channel_badge: 'ইউটিউব চ্যানেল: @SukoonPalacebd',
+    video_badge_promo: 'অফিসিয়াল প্রমো',
+    video_badge_society: 'আঁটি মডেল টাউন',
+    video_badge_channel: 'সকল ভিডিও',
+    video_1_title: 'সুকুন প্যালেস - ১৬ তলা লাক্সারি রেসিডেন্সিয়াল প্রজেক্ট প্রমো',
+    video_1_desc: '১৬ তলা সুবিশাল রাজকীয় অ্যাপার্টমেন্ট টাওয়ার, ছাদের ইনফিনিটি পুল এবং পরিবেশের ড্রামাটিক উপস্থাপনা।',
+    video_2_title: 'আঁটি মডেল টাউন সোসাইটি পরিচিতি ও সুযোগ-সুবিধা',
+    video_2_desc: 'প্রকল্প এলাকার সুপ্রশস্ত ৬০ ফুট এভিনিউ, কেন্দ্রীয় মসজিদ, পার্ক এবং শতভাগ সুপরিকল্পিত পরিবেশের সফর।',
+    video_3_title: 'অফিসিয়াল ইউটিউব চ্যানেল (@SukoonPalacebd)',
+    video_3_desc: 'নতুন প্রজেক্ট আপডেট, নির্মাণ অগ্রগতি ও ভিডিও দেখতে আমাদের অফিসিয়াল চ্যানেলটি এখনই সাবস্ক্রাইব করে রাখুন।',
+    btn_play_now: 'প্লে করুন',
+    btn_watch_yt: 'ইউটিউবে দেখুন',
+    btn_subscribe_yt: 'চ্যানেলে সাবস্ক্রাইব করুন'
   },
   en: {
     announcement_badge: 'Pre-Booking Ongoing',
     announcement_text: 'Estimated Construction Start: November 2027 | Saf-Kabla Deed within 3-4 Working Days',
+    nav_videos: 'Videos',
     nav_overview: 'Overview',
     nav_engineering: 'Engineering',
     nav_amenities: 'Amenities',
@@ -746,7 +764,23 @@ const TRANSLATIONS = {
     tip_call: 'Call Directly',
     modal_success_title: 'Thank You! Your Request Has Been Received',
     modal_success_desc: 'Our senior relationship officer will contact you shortly to coordinate your site visit.',
-    modal_btn_close: 'Got It'
+    modal_btn_close: 'Got It',
+    video_subbadge: 'Official Video Gallery',
+    video_heading: 'Sukoon Palace Video Stories & Site Tour',
+    video_lead: 'Experience the grandeur of Sukoon Palace and Ati Model Town through our official YouTube video showcase.',
+    video_channel_badge: 'YouTube Channel: @SukoonPalacebd',
+    video_badge_promo: 'Official Promo',
+    video_badge_society: 'Ati Model Town',
+    video_badge_channel: 'All Videos',
+    video_1_title: 'Sukoon Palace - 16-Storied Luxury Condominium Promo',
+    video_1_desc: 'A visual walkthrough of the landmark residential tower, rooftop infinity pool, and serene green living.',
+    video_2_title: 'Ati Model Town - Master-Planned Community Tour',
+    video_2_desc: 'Explore the 60ft wide society avenue, central mosque, greenery, and scenic residential security.',
+    video_3_title: 'Official YouTube Channel (@SukoonPalacebd)',
+    video_3_desc: 'Subscribe to our official YouTube channel for regular construction updates and video tours.',
+    btn_play_now: 'Play Video',
+    btn_watch_yt: 'Watch on YouTube',
+    btn_subscribe_yt: 'Subscribe on YouTube'
   }
 };
 
@@ -756,6 +790,7 @@ let currentLang = 'bn';
 document.addEventListener('DOMContentLoaded', () => {
   initLanguageToggle();
   initNavigation();
+  initVideoCarousel();
   initFloorPlanExplorer();
   initAmenitiesTabs();
   initCostCalculator();
@@ -1348,5 +1383,80 @@ function initBackToTop() {
 
   backToTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// --- 14. YOUTUBE VIDEO CAROUSEL & MODAL PLAYER ---
+function initVideoCarousel() {
+  const videoTrack = document.getElementById('videoCarouselTrack');
+  const navPrev = document.getElementById('videoNavPrev');
+  const navNext = document.getElementById('videoNavNext');
+  const videoModal = document.getElementById('videoModal');
+  const videoIframe = document.getElementById('videoIframe');
+  const videoModalClose = document.getElementById('videoModalClose');
+
+  // Left/Right Arrow scrolling
+  if (videoTrack && navPrev && navNext) {
+    navPrev.addEventListener('click', () => {
+      const scrollAmt = videoTrack.clientWidth > 600 ? 380 : 300;
+      videoTrack.scrollBy({ left: -scrollAmt, behavior: 'smooth' });
+    });
+    navNext.addEventListener('click', () => {
+      const scrollAmt = videoTrack.clientWidth > 600 ? 380 : 300;
+      videoTrack.scrollBy({ left: scrollAmt, behavior: 'smooth' });
+    });
+  }
+
+  // Open Video Modal
+  function openVideoModal(videoId) {
+    if (!videoModal || !videoIframe) return;
+    videoIframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
+    videoModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  // Close Video Modal
+  function closeVideoModal() {
+    if (!videoModal || !videoIframe) return;
+    videoModal.classList.remove('active');
+    videoIframe.src = '';
+    document.body.style.overflow = '';
+  }
+
+  // Bind click on play buttons & modal buttons
+  document.querySelectorAll('.open-video-modal, .play-pulse-btn').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const vid = btn.getAttribute('data-video-id');
+      if (vid) openVideoModal(vid);
+    });
+  });
+
+  // Bind click on thumbnail area (except channel hub)
+  document.querySelectorAll('.video-thumb-wrap:not(.channel-thumb-wrap)').forEach((wrap) => {
+    wrap.addEventListener('click', (e) => {
+      // Don't trigger if clicked button directly (handled above)
+      if (e.target.closest('button')) return;
+      const vid = wrap.getAttribute('data-video-id');
+      if (vid) openVideoModal(vid);
+    });
+  });
+
+  // Close handlers
+  if (videoModalClose) {
+    videoModalClose.addEventListener('click', closeVideoModal);
+  }
+
+  if (videoModal) {
+    videoModal.addEventListener('click', (e) => {
+      if (e.target === videoModal) closeVideoModal();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && videoModal && videoModal.classList.contains('active')) {
+      closeVideoModal();
+    }
   });
 }

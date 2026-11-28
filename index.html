@@ -51,6 +51,7 @@
 
       <nav class="nav-menu" id="navMenu">
         <ul class="nav-links">
+          <li><a href="#videos" class="nav-item" data-i18n="nav_videos">ভিডিও</a></li>
           <li><a href="#overview" class="nav-item" data-i18n="nav_overview">প্রজেক্ট পরিচিতি</a></li>
           <li><a href="#engineering" class="nav-item" data-i18n="nav_engineering">কাঠামো ও ডিজাইন</a></li>
           <li><a href="#amenities" class="nav-item" data-i18n="nav_amenities">সুযোগ-সুবিধা</a></li>
@@ -184,6 +185,112 @@
           <div class="fact-info">
             <span class="fact-title" data-i18n="fact_handover_title">সম্ভাব্য শুরু</span>
             <span class="fact-desc" data-i18n="fact_handover_desc">নভেম্বর ২০২৭ (৪০ মাসে নির্মাণ শেষ)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- YouTube Video Gallery Carousel Section (Above 'প্রকল্প সম্পর্কিত কিছু কথা') -->
+  <section class="video-carousel-section" id="videos">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="sub-badge" data-i18n="video_subbadge">
+          <i class="fa-brands fa-youtube" style="color: #ff3333; margin-right: 6px;"></i> অফিসিয়াল ভিডিও গ্যালারি
+        </div>
+        <h2 class="section-heading" data-i18n="video_heading">সুকুন প্যালেস ভিডিও স্টোরি ও সাইট ট্যুর</h2>
+        <div class="gold-line"></div>
+        <p class="section-lead" data-i18n="video_lead">
+          আমাদের অফিসিয়াল YouTube চ্যানেলের এক্সক্লুসিভ প্রমো ও আঁটি মডেল টাউন সোসাইটি পরিচিতি ভিডিও দেখে প্রকল্পের বাস্তব পরিবেশ অনুভব করুন।
+        </p>
+        <div class="yt-header-action mt-3">
+          <a href="https://www.youtube.com/@SukoonPalacebd" target="_blank" rel="noopener noreferrer" class="yt-channel-badge">
+            <i class="fa-brands fa-youtube"></i> <span data-i18n="video_channel_badge">ইউটিউব চ্যানেল: @SukoonPalacebd</span> <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; margin-left: 4px;"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="video-carousel-container">
+        <!-- Carousel Nav Buttons (Desktop) -->
+        <button class="video-nav-btn prev" id="videoNavPrev" aria-label="Previous Video">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="video-nav-btn next" id="videoNavNext" aria-label="Next Video">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <!-- Scrollable Track (Swipeable left-to-right on mobile & clickable) -->
+        <div class="video-carousel-track" id="videoCarouselTrack">
+          <!-- Video Card 1: Sukoon Palace Promo -->
+          <div class="video-card">
+            <div class="video-thumb-wrap" data-video-id="FTWkh60F0aU">
+              <img src="assets/yt_thumb_promo.jpg" alt="Promo Video Sukoon Palace" class="video-thumb-img" loading="lazy">
+              <div class="video-overlay">
+                <span class="video-badge" data-i18n="video_badge_promo"><i class="fa-solid fa-fire"></i> অফিসিয়াল প্রমো</span>
+                <button class="play-pulse-btn" aria-label="Play Promo Video" data-video-id="FTWkh60F0aU">
+                  <i class="fa-solid fa-play"></i>
+                </button>
+              </div>
+            </div>
+            <div class="video-card-body">
+              <h3 class="video-title" data-i18n="video_1_title">সুকুন প্যালেস - ১৬ তলা লাক্সারি রেসিডেন্সিয়াল প্রজেক্ট প্রমো</h3>
+              <p class="video-desc" data-i18n="video_1_desc">১৬ তলা সুবিশাল রাজকীয় অ্যাপার্টমেন্ট টাওয়ার, ছাদের ইনফিনিটি পুল এবং পরিবেশের ড্রামাটিক উপস্থাপনা।</p>
+              <div class="video-card-actions">
+                <button class="btn btn-sm btn-outline open-video-modal" data-video-id="FTWkh60F0aU">
+                  <i class="fa-solid fa-circle-play"></i> <span data-i18n="btn_play_now">প্লে করুন</span>
+                </button>
+                <a href="https://www.youtube.com/watch?v=FTWkh60F0aU" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-gold">
+                  <i class="fa-brands fa-youtube"></i> <span data-i18n="btn_watch_yt">ইউটিউবে দেখুন</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video Card 2: Ati Model Town Society Tour -->
+          <div class="video-card">
+            <div class="video-thumb-wrap" data-video-id="oGJaSYMKouI">
+              <img src="assets/yt_thumb_society.jpg" alt="ATI Society Sukoon Palace" class="video-thumb-img" loading="lazy">
+              <div class="video-overlay">
+                <span class="video-badge" data-i18n="video_badge_society"><i class="fa-solid fa-tree-city"></i> আঁটি মডেল টাউন</span>
+                <button class="play-pulse-btn" aria-label="Play Society Video" data-video-id="oGJaSYMKouI">
+                  <i class="fa-solid fa-play"></i>
+                </button>
+              </div>
+            </div>
+            <div class="video-card-body">
+              <h3 class="video-title" data-i18n="video_2_title">আঁটি মডেল টাউন সোসাইটি পরিচিতি ও সুযোগ-সুবিধা</h3>
+              <p class="video-desc" data-i18n="video_2_desc">প্রকল্প এলাকার সুপ্রশস্ত ৬০ ফুট এভিনিউ, কেন্দ্রীয় মসজিদ, পার্ক এবং শতভাগ সুপরিকল্পিত পরিবেশের সফর।</p>
+              <div class="video-card-actions">
+                <button class="btn btn-sm btn-outline open-video-modal" data-video-id="oGJaSYMKouI">
+                  <i class="fa-solid fa-circle-play"></i> <span data-i18n="btn_play_now">প্লে করুন</span>
+                </button>
+                <a href="https://www.youtube.com/watch?v=oGJaSYMKouI" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-gold">
+                  <i class="fa-brands fa-youtube"></i> <span data-i18n="btn_watch_yt">ইউটিউবে দেখুন</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video Card 3: Official Channel Hub -->
+          <div class="video-card channel-hub-card">
+            <div class="video-thumb-wrap channel-thumb-wrap">
+              <div class="channel-hub-visual">
+                <div class="yt-play-icon-huge"><i class="fa-brands fa-youtube"></i></div>
+                <div class="channel-brand-badge">SUKOON PALACE</div>
+              </div>
+              <div class="video-overlay">
+                <span class="video-badge" data-i18n="video_badge_channel"><i class="fa-solid fa-bell"></i> সকল ভিডিও</span>
+              </div>
+            </div>
+            <div class="video-card-body">
+              <h3 class="video-title" data-i18n="video_3_title">অফিসিয়াল ইউটিউব চ্যানেল (@SukoonPalacebd)</h3>
+              <p class="video-desc" data-i18n="video_3_desc">নতুন প্রজেক্ট আপডেট, নির্মাণ অগ্রগতি ও ভিডিও দেখতে আমাদের অফিসিয়াল চ্যানেলটি এখনই সাবস্ক্রাইব করে রাখুন।</p>
+              <div class="video-card-actions">
+                <a href="https://www.youtube.com/@SukoonPalacebd?sub_confirmation=1" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-gold w-100">
+                  <i class="fa-brands fa-youtube"></i> <span data-i18n="btn_subscribe_yt">চ্যানেলে সাবস্ক্রাইব করুন</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1425,6 +1532,16 @@
       <h3 data-i18n="modal_success_title">ধন্যবাদ! আপনার আবেদন গৃহীত হয়েছে</h3>
       <p id="modalSuccessDesc" data-i18n="modal_success_desc">আমাদের সিনিয়র রিলেশনশিপ অফিসার অতি দ্রুত আপনার সাথে যোগাযোগ করবেন।</p>
       <button class="btn btn-gold btn-sm mt-3" id="closeSuccessModalBtn" data-i18n="modal_btn_close">ঠিক আছে</button>
+    </div>
+  </div>
+
+  <!-- Video Player Modal -->
+  <div id="videoModal" class="video-modal-overlay">
+    <div class="video-modal-container">
+      <button class="video-modal-close" id="videoModalClose" aria-label="Close Video">&times;</button>
+      <div class="video-iframe-wrap">
+        <iframe id="videoIframe" src="" title="Sukoon Palace Video Player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
 
